@@ -1,3 +1,3 @@
 # Projeto RocketMovies usando react
 
-Front-end usando --vite--
+Front-end usando **vite**
