@@ -14,10 +14,17 @@ export const Container = styled.div`
     align-items: center;
 
     padding: 0 124px;
+    a{
+      display: flex;
+      align-items: center;
 
+      color: ${({theme}) => theme.COLORS.PINK};
+    }  
     svg{
-      color: ${({theme}) => theme.COLORS.GRAY_100};
-      font-size: 24px;
+      color: ${({theme}) => theme.COLORS.PINK};
+      font-size: 16px;
+
+      margin-right: 8px;
     }
   }
 `;
@@ -27,6 +34,9 @@ export const Form = styled.form`
 
   > div:nth-child(4){
     margin-top: 24px;
+  }
+  > button{
+    opacity: 0.5;
   }
 `;
 
@@ -47,7 +57,7 @@ export const Avatar = styled.div`
     width: 48px;
     height: 48px;
 
-    background-color: ${({theme}) => theme.COLORS.ORANGE};
+    background-color: ${({theme}) => theme.COLORS.PINK};
     border-radius: 50%;
 
     display: flex;

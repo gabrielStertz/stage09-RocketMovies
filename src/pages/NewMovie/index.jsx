@@ -1,36 +1,39 @@
 import { Container, Form } from "./style";
 import { Link } from 'react-router-dom';
+import { FiArrowLeft } from "react-icons/fi";
 
 import { Header } from '../../components/header';
 import { Input } from '../../components/input';
 import { TextArea } from '../../components/text-area';
-import { NoteItem } from '../../components/noteItem';
+import { MovieTag } from '../../components/movieTag';
 import { Section } from '../../components/section';
 import { Button } from '../../components/button';
 
-export function NewNote(){
+export function NewMovie(){
   return(
     <Container>
       <Header/>
       <main>
         <Form>
           <header>
-            <h1>Criar nota</h1>
-            <Link to="/">Voltar</Link>
+            <Link to="/"><FiArrowLeft/> Voltar</Link>
+            <h1>Novo Filme</h1>
           </header>
-          <Input type='text' placeholder='Título'/>
+          <div>
+            <Input type='text' placeholder='Título'/>
+            <Input type='text' placeholder='Sua nota (de 0 a 5)'/>
+          </div>
           <TextArea placeholder='Observações'/>
-          <Section title='Links úteis'>
-            <NoteItem value="https://rocketseat.com.br"/>
-            <NoteItem placeholder='Novo Link' isNew/>
-          </Section>
           <Section title='Marcadores'>
             <div className="tags">
-              <NoteItem value="React"/>
-              <NoteItem placeholder='Nova Tag' isNew/>
+              <MovieTag value="React"/>
+              <MovieTag placeholder='Novo marcador' isNew/>
             </div>
           </Section>
-          <Button title='Salvar'/>
+          <div className="buttons">
+            <Button className = 'delete' title='Excluir filme'/>  
+            <Button title='Salvar alterações'/>
+          </div>
         </Form>
       </main>
     </Container>

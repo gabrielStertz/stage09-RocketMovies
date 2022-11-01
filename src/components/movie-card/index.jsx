@@ -1,10 +1,16 @@
 import { Container } from "./style";
+import { StarNote } from "../StarNotes";
 import { Tag } from "../tag";
 
-export function Note({ data, ...rest }){
+export function MovieCard({ data, ...rest }){
   return(
     <Container {...rest}>
       <h1>{data.title}</h1>
+
+      <StarNote stars={data.stars}/>
+
+      <p>{data.description}</p>
+
 
       {
         data.tags &&

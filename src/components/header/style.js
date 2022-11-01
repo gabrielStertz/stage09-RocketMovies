@@ -4,49 +4,52 @@ import { Link } from 'react-router-dom';
 export const Container = styled.header`
   grid-area: header;
 
-  height: 105px;
+  height: 116px;
   width: 100%;
 
   border-bottom: 1px solid ${({theme}) => theme.COLORS.BACKGROUND_700};
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 64px;
 
-  padding: 0 80px;
+  padding: 24px 123px;
+
+  > h1{
+    font-size: 24px;
+    color: ${({theme}) => theme.COLORS.PINK};
+  }
 `;
 
-export const Profile = styled(Link)`
+export const Profile = styled.div`
   display: flex;
   align-items: center;
+  min-width: 198px;
 
-  > img{
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-  };
   > div{
     display: flex;
     flex-direction: column;
     margin-left: 16px;
     line-height: 24px;
 
-    span{
-      font-size: 14px;
-      color: ${({theme}) => theme.COLORS.GRAY_100};
-    };
     strong{
-      font-size: 18px;
+      font-size: 14px;
       color: ${({theme}) => theme.COLORS.WHITE};
     };
   };
   `;
   
-  export const Logout = styled.button`
-    border: none;
-    background: none;
-
-    > svg{
-      color: ${({theme}) => theme.COLORS.GRAY_100};
-      font-size: 36px;
-    }
+  export const Logout = styled(Link)`
+    font-size: 14px;
+    text-align: end;
+    color: ${({theme}) => theme.COLORS.GRAY_100};
+  `;
+  export const Image = styled(Link)`
+    margin-left: 15px;
+    > img{
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    };
   `;

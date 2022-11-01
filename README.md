@@ -1,1 +1,3 @@
-# Projet RocketNotes usando react
+# Projeto RocketMovies usando react
+
+Front-end usando --vite--
