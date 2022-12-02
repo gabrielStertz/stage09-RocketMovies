@@ -28,12 +28,32 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  > a{
+  .buttons{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-
-    color: ${({theme}) => theme.COLORS.PINK};
+    > button:first-child{
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: ${({theme}) => theme.COLORS.PINK};
+    };
+    > button:last-child{
+      width: 207px;
+      height: 48px;
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      background-color: ${({theme}) => theme.COLORS.PINK};
+      color: ${({theme}) => theme.COLORS.BACKGROUND_800};
+    
+      border: none;
+      border-radius: 10px;
+    }
   };
   .title{
     display: flex;
@@ -68,6 +88,7 @@ export const Content = styled.div`
     padding: 40px 0;
   }
   > p {
+    width: 100%;
     font-size: 16px;
     margin-top: 16px;
     text-align: justify;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   width: 100%;
@@ -37,7 +36,7 @@ export const Content = styled.div`
   }
 `;
 
-export const AddMovie = styled(Link)`
+export const AddMovie = styled.button`
   width: 207px;
   height: 48px;
 
@@ -48,6 +47,7 @@ export const AddMovie = styled(Link)`
   background-color: ${({theme}) => theme.COLORS.PINK};
   color: ${({theme}) => theme.COLORS.BACKGROUND_800};
 
+  border: none;
   border-radius: 10px;
 
   > svg{

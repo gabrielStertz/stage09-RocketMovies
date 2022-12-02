@@ -7,16 +7,16 @@ export function MovieCard({ data, ...rest }){
     <Container {...rest}>
       <h1>{data.title}</h1>
 
-      <StarNote stars={data.stars}/>
+      <StarNote stars={data.rating}/>
 
       <p>{data.description}</p>
 
 
       {
-        data.tags &&
+        data.movie_tags &&
         <footer>
           {
-            data.tags.map(tag => <Tag key={tag.id} title={tag.name}/>)
+            data.movie_tags.map(tag => <Tag key={tag.id} title={tag.name}/>)
           }  
         </footer>
       }

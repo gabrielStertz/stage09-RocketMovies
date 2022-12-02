@@ -40,7 +40,9 @@ export const Profile = styled.div`
   };
   `;
   
-  export const Logout = styled(Link)`
+  export const Logout = styled.button`
+    background: none;
+    border: none;
     font-size: 14px;
     text-align: end;
     color: ${({theme}) => theme.COLORS.GRAY_100};

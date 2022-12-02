@@ -14,7 +14,9 @@ export const Container = styled.div`
     align-items: center;
 
     padding: 0 124px;
-    a{
+    button{
+      background: none;
+      border: none;
       display: flex;
       align-items: center;
 
@@ -34,9 +36,6 @@ export const Form = styled.form`
 
   > div:nth-child(4){
     margin-top: 24px;
-  }
-  > button{
-    opacity: 0.5;
   }
 `;
 

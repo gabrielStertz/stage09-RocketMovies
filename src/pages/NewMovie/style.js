@@ -7,7 +7,7 @@ export const Container = styled.div`
   color: ${({theme}) => theme.COLORS.WHITE};
   
   display: grid;
-  grid-template-rows: 105px auto;
+  grid-template-rows: 116px auto;
   grid-template-areas: "header" "content";
 
   > main{
@@ -36,7 +36,11 @@ export const Form = styled.form`
 
     margin-bottom: 40px;
 
-    a{
+    button{
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
       font-size: 16px;
       margin-bottom: 24px;
       color: ${({theme}) => theme.COLORS.PINK};
